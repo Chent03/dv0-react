@@ -8,8 +8,9 @@ class Chart extends Component {
             data: [],
         }
     }
+    // Trying something
     async componentDidMount() {
-        let res = await axios.get('/api/dvo/loan')
+        let res = await axios.get('/api/dvo/loan');
         let m = res.data.map(obj => {
             return {x: parseFloat(obj.IntRate), y:  parseInt(obj.AnnualInc)}
         })
